@@ -1,0 +1,30 @@
+server:
+  port: 9007
+
+spring:
+  application:
+    name: microservicecloud-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+
+
+zuul:
+  ignored-services: microservicecloud-dept #隐藏实际serviceName
+  prefix: /codeman
+#  ignored-services: "*"  #隐藏所有的serviceName
+  routes:
+    mydept.serviceId: microservicecloud-dept
+    mydept.path: /mydept/**
+
+info:
+  app.name: codeman-microcloud
+  company.name: www.codeman.com
+  build.artifactId: microservicecloud-zuul-007
+  build.version: 1.0-SNAPSHOT
+

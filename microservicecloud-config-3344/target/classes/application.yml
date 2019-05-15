@@ -1,0 +1,13 @@
+server:
+  port: 3346
+
+spring:
+  application:
+    name:  microservicecloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Cod4Man/microservice-config.git #GitHub上面的git仓库名字
+
+
