@@ -1,0 +1,19 @@
+﻿spring:
+  profiles:
+    active:
+    - dev
+
+---
+spring:
+  profiles: dev #开发环境
+  application:
+    name: microservice dev
+server:
+  port: 8077
+---
+server:
+  port: 8078
+spring:
+  profiles: test #测试环境
+  application:
+    name: microservice test

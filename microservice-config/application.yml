@@ -1,0 +1,17 @@
+﻿spring: 
+  profiles: 
+    active: 
+      - dev
+
+---
+spring: 
+  profiles: dev #开发环境
+  application: 
+    name: microservice dev
+---
+spring: 
+  profiles: test #测试环境
+  application: 
+    name: microservice test
+
+#切记。编码格式为UTF-8，否则会识别不出来
